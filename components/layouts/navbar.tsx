@@ -39,13 +39,7 @@ const SideNav = ({ folders }: { folders: any }) => {
                 <SheetHeader>
                     <SheetTitle>Menu</SheetTitle>
                     <SheetDescription className="flex flex-row justify-around underline">
-                        <Link href="/about" role="menuitem">
-                            <SheetClose>About</SheetClose>
-                        </Link>
-                        <Link href="/liked" role="menuitem">
-                            <SheetClose>My Likes</SheetClose>
-                        </Link>
-                        <Link href="/" role="menuitem">
+                       <Link href="/" role="menuitem">
                             <SheetClose>Home</SheetClose>
                         </Link>
                     </SheetDescription>
@@ -60,9 +54,9 @@ const SideNav = ({ folders }: { folders: any }) => {
                                 role="menuitem"
                             >
                                 <SheetClose className="flex flex-col transition-colors bg-accent text-accent-foreground px-2 py-1 rounded-md w-full">
-                                    <h1 className="text-xl font-semibold">
+                                    <h2 className="text-xl font-semibold">
                                         {folder.name}
-                                    </h1>
+                                    </h2>
                                     <span className="text-[0.65rem] uppercase text-muted-foreground">
                                         {folder.total_files} videos
                                     </span>
@@ -152,13 +146,6 @@ const Navbar = async () => {
             </div>
             <div className="flex flex-row space-x-2">
                 <div className="hidden md:flex items-center gap-4">
-                    <Link
-                        href="/liked"
-                        className="hover:bg-accent px-2 py-1.5 rounded-md"
-                        aria-label="Open liked videos"
-                    >
-                        Liked Videos
-                    </Link>
                     <NavMenu folders={folders}></NavMenu>
                 </div>
                 <SearchInput className="hidden md:block w-full md:w-[260px] lg:w-[300px]" />
