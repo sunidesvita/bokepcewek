@@ -103,7 +103,6 @@ const jsonLd = {
                 url: 'https://bokepcewek.pages.dev'
               }
         }
-        }
         const jsonLd2 = {
         '@context': 'https://schema.org',
         '@type': 'Article',
